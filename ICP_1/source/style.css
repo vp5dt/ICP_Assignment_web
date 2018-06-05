@@ -98,8 +98,17 @@ input {
   font-size: 20px;
 }
 
-img {
-  border-radius: 50%;
+
+
+.flex-container {
+  display: flex;
+
+}
+.flex-container > div {
+
+  margin: 5px;
+  padding: 10px;
+
 }
 
 input:focus {
