@@ -1,0 +1,37 @@
+.menu {
+  list-style: upper-latin;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.tblSpan
+{
+  width:200px;
+  height:auto;
+  margin:20px 20px 20px 20px;
+
+}
+
+ input[type=text] {
+   width: 75%;
+   height: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   border: none;
+   border-bottom: 2px solid red;
+ }
