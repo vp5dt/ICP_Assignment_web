@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -33,8 +33,7 @@
 
         <TextView
             style="@style/HeaderTextStyle"
-            android:text="@string/toppings"
-            />
+            android:text="@string/toppings" />
 
         <CheckBox
             android:id="@+id/chicken_checked"
@@ -49,33 +48,28 @@
             android:id="@+id/bacon_checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Bacon"
-            android:textSize="16sp"
+            android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
-            android:layout_marginBottom="16sp"/>
+            android:text="@string/Bacon"
+            android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/pepperoni_checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Pepperoni"
-            android:textSize="16sp"
+            android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
-            android:layout_marginBottom="16sp"/>
+            android:text="@string/Pepperoni"
+            android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/op_checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/OP"
-            android:textSize="16sp"
+            android:layout_marginBottom="16sp"
             android:paddingLeft="24dp"
-            android:layout_marginBottom="16sp"/>
-
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:text="@string/quantity"
-            />
+            android:text="@string/OP"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,8 +81,7 @@
                 android:layout_height="48dp"
                 android:layout_marginRight="8dp"
                 android:onClick="decrement"
-                android:text="-"
-                />
+                android:text="-" />
 
 
             <TextView
@@ -99,19 +92,28 @@
                 android:text="@string/initial_quantity_value"
                 android:textColor="#000000" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="Order Pizza"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:onClick="increment"
-                android:text="+"
-                />
+                android:text="+" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/orderPizzaCardView"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="56dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="56dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:onClick="orderPizzaMain"
@@ -126,30 +128,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Order Pizza"
-                        android:textColor="#fff"
-                        android:textSize="16sp"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/orderSummary"
                 android:layout_width="90dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="56dp"
-                android:visibility="visible"
-                app:cardBackgroundColor="@color/colorPrimary"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="12dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:onClick="orderSummary"
-                android:id="@+id/orderSummary">
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="12dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -162,11 +156,43 @@
                         android:layout_centerInParent="true"
                         android:text="Summary"
                         android:textColor="#fff"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/callOrder"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="56dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="orderSummary"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/callOrder1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="call"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/quantity" />
 
     </LinearLayout>
 
